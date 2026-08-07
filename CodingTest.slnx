@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SubsequenceLib.Tests/SubsequenceLib.Tests.csproj" />
+  <Project Path="SubsequenceLib/SubsequenceLib.csproj" />
+</Solution>
