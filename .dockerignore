@@ -1,0 +1,14 @@
+# Build and debug folders
+bin/
+obj/
+.vs/
+
+# Git and GitHub
+.git/
+.github/
+
+# IDE and OS specific files
+.DS_Store
+*.user
+*.suo
+*.userprefs
