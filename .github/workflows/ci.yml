@@ -1,0 +1,29 @@
+name: .NET CI
+
+on:
+  push:
+    branches: ["**"] # Triggers on push to any branch
+  pull_request:
+    branches: [main, master] # Triggers on PRs to main/master
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x" # Update this to match your SDK version (e.g., 8.0, 9.0)
+
+      - name: Restore dependencies
+        run: dotnet restore CodingTest.slnx
+
+      - name: Build solution
+        run: dotnet build CodingTest.slnx --no-restore --configuration Release
+
+      - name: Run unit tests
+        run: dotnet test CodingTest.slnx --no-build --configuration Release --verbosity normal
