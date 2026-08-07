@@ -29,4 +29,4 @@ jobs:
         run: dotnet format CodingTest.slnx --verify-no-changes --verbosity diagnostic
 
       - name: Run unit tests with code coverage
-      run: dotnet test CodingTest.slnx --no-build --configuration Release --collect:"XPlat Code Coverage" --settings SubsequenceLib.Tests/coverlet.runsettings
+        run: dotnet test CodingTest.slnx --no-build --configuration Release --collect:"XPlat Code Coverage"
