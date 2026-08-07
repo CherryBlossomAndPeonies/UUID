@@ -96,7 +96,7 @@ public class SubsequenceLibTests
     public void TestCase10()
     {
         string input = "6 2 4 3 1 5 9";
-        List<int> expected = new List<int> { 1,5,9 };
+        List<int> expected = new List<int> { 1, 5, 9 };
         List<int> result = new SubsequenceOperations().FindLongestIncreasingSubsequence(input);
 
         Assert.Equal(expected, result);

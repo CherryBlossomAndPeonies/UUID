@@ -1,4 +1,4 @@
-public interface  ISubsequenceOperations
+public interface ISubsequenceOperations
 {
     List<int> FindLongestIncreasingSubsequence(string sequence);
 }
